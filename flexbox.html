@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://fonts.cdnfonts.com/css/avenir-lt-std" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Suporte CSS - Flexbox</title>
+</head>
+<body>
+
+    <nav>
+        <ul class="menu">
+          <li>
+            <a href="position.html">Position</a>
+          </li>
+          <li>
+            <a href="display.html">Display</a>
+          </li>
+           <li>
+            <a href="index.html">Overflow</a>
+          </li>
+          <li>
+            <a href="flexbox.html">Flexbox</a>
+          </li>
+        </ul>
+      </nav>
+
+      <h1>Flexbox</h1>
+
+          <ul class="l-exemplo">
+            <li>
+                <p class="explicacao">Resumo: - Definir um recipiente <span>flex</span>; <span>inline</span> ou <span>block</span>, dependendo do valor dado. Permite um contexto <span>flex</span> para todos os seus filhos diretos, com diferentes tratamentos para aquele flex item.</p>
+            </li>
+          </ul>
+
+      <ol class="lista">
+        
+          <li>
+              <p id="direction"><span>flex-direction:</span> - Isso estabelece o eixo principal, definindo assim a direção que os <span>flex items</span> são colocados no recipiente flex. Flexbox é um conceito de layout de direção única. Pense nos <span>flex items</span> como principalmente colocados em linhas horizontais ou colunas verticais. </p>
+                <p class="nota">Exemplo: - flex-direction: row | row-reverse | column | column-reverse;</p>
+                <ol>
+                    <li>
+                        <p><span>row (padrão);</span> da esquerda (left) para a direita (right) ltr; direita (right) à esquerda (left) rtl;</p>
+                    </li>
+                    <li>
+                        <p><span>row-reverse;</span> direita (right) para a esquerda (left); da esquerda (left) para a direita (right).</p>
+                    </li>
+                    <li>
+                        <p><span>column;</span> o mesmo que <span>row</span>, mas de cima (top) para baixo (bottom).</p>
+                    </li>
+                    <li>
+                        <p><span>column-reverse;</span> o mesmo que <span>row-reverse</span>, mas de baixo (bottom) para cima (top).</p>
+                    </li>
+                </ol>
+                <div class="img-center">
+                    <img class="img" src="img/flex-direction.svg" alt="imagem de exemplo do flex-direction">
+                </div>
+                
+            </li>
+            
+          <li>
+              <p><span>flex-wrap:</span> Por padrão, os <span>flex items</span> tentarão todos se encaixar em uma linha. Você pode mudar isso e permitir que os itens embrulhem conforme necessário com esta propriedade.</p>
+              <p class="nota">Exemplo - flex-wrap: nowrap | wrap | wrap-reverse;</p>
+              <ol class="sub-lista">
+                  <li>
+                      <p><span>nowrap (padrão):</span> Todos os flex items estarão em uma linha</p>
+                  </li>
+                  <li>
+                    <p><span>wrap;</span> Os flex items serão embrulhado em várias linhas, de cima a baixo, e para quebra de linha caso ele não couber.</p>
+                </li>
+                <li>
+                    <p><span>wrap-reverse;</span> Os flex items envolverão em várias linhas de baixo para cima.</p>
+                </li>
+              </ol>
+              <div class="img-center">
+                <img class="img" src="img/flex-wrap.svg" alt="imagem de exemplo flex-wrap">
+              </div>
+          </li>
+
+          <li>
+              <p><span>flex-flow:</span> Esta é uma abreviação de propriedades de <span>flex-direction</span> e <span>flex-wrap</span>, que juntas definem os eixos principal e cruzado do flex container. O valor padrão é <span>row nowrap</span>.</p>
+              <p class="nota">Exemplo - flex-flow: column wrap;</p>
+          </li>
+
+          <li>
+            <p><span>justify-content:</span> Isso define o alinhamento ao longo do eixo principal. Ele ajuda a distribuir sobras extras de espaço livre quando todos os <span>flex items</span> em uma linha são inflexíveis, ou são flexíveis, mas atingiram seu tamanho máximo. Ele também exerce algum controle sobre o alinhamento dos itens quando eles transbordam a linha.</p>
+            <p class="nota">justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly | + safe | unsafe;</p>
+            <ol>
+                <li>
+                    <p><span>flex-start (padrão);</span> Os itens são colocados no início do <a class="i-links" href="#direction">flex-direction</a>.</p>
+                </li>
+                <li>
+                    <p><span>flex-end;</span> Os itens são colocados no final do <a class="i-links" href="#direction">flex-direction</a>.</p>
+                </li>
+                <li>
+                    <p><span>start;</span> Os itens são colocados para o início da direção <span>writing-mode</span>.</p>
+                </li>
+                <li>
+                    <p><span>end;</span> Os itens são colocados no final da direção <span>writing-mode</span>.</p>
+                </li>
+                <li>
+                    <p><span>center;</span>  Os itens são centrados ao longo da linha.</p>
+                </li>
+                <li>
+                    <p><span>space-between;</span> Os itens são distribuídos uniformemente na linha; primeiro item está na linha de partida (start), último item na linha final (end). </p>
+                </li>
+                <li>
+                    <p><span>space-around;</span> Os itens são distribuídos uniformemente na linha com espaço igual ao seu redor. Note que visualmente os espaços não são iguais, já que todos os itens têm espaço igual em ambos os lados. O primeiro item terá uma unidade de espaço contra a borda do contêiner, mas duas unidades de espaço entre o próximo item porque o próximo item tem seu próprio espaçamento que se aplica.</p>
+                </li>
+                <li>
+                    <p><span>space-evenly;</span> Os items são distribuídos para que o espaçamento entre os dois items (e o espaço até as bordas) seja igual.</p>
+                </li>
+                <div class="img-center">
+                    <img class="img" src="img/justify-content.svg" alt="imagem de exemplo justify-content">
+                </div>
+            </ol>
+        </li>
+        <li>
+            <p><span>align-items:</span> Isso define o comportamento padrão de como os itens flex são dispostos ao longo do <span>cross axis</span> na linha atual. Pense nisso como <span>justify-content</span> da versão para o eixo transversal (perpendicular ao eixo principal (main-axis)).</p>
+            <p class="nota"> align-items: stretch | flex-start | flex-end | center | baseline | first baseline | last baseline | start | end | self-start | self-end + ... safe | unsafe;</p>
+            <ol>
+                <li>
+                    <p><span>stretch (padrão);</span> Estica os elementos para encher o recipiente (ainda respeitando a largura mínima (min-width) / largura máxima (max-width) ).</p>
+                </li>
+                <li>
+                    <p><span>flex-start / start / self-start;</span>  Os itens são colocados no início do eixo cruzado <span>(cross axis)</span>. A diferença entre estes é sutil, e é sobre respeitar as regras <span>flex-direction</span> ou as regras <span>writing-mode</span>.</p>
+                </li>
+                <li>
+                    <p><span>flex-end / end / self-end;</span> Os itens são colocados nas extremidades do eixo cruzado <span>(cross axis)</span>. A diferença novamente é sutil e é sobre respeitar regras <span>flex-direction</span> versus <span>writing-mode</span>.</p>
+                </li>
+                <li>
+                    <p><span>center;</span> Os items estão centrados no eixo transversal</p>
+                </li>
+                <li>
+                    <p><span>baseline; </span> Os items estão alinhados, como base em suas linhas de base alinhadas.</p>
+                </li>
+            </ol>
+            <div class="img-center">
+                <img class="img" src="img/align-items.svg" alt="imagem de exemplo align-items">
+            </div>
+        </li>
+
+        <li>
+            <p><span>align-content:</span> Alinha as linhas de um recipiente dentro do flex quando há espaço extra no eixo transversal <span>(cross axis)</span>, semelhante à forma como <span>(justify-content)</span> alinha items individuais dentro do eixo principal <span>(main-axis)</span>.</p>
+            <p class="nota">align-content: flex-start | flex-end | center | space-between | space-around | space-evenly | stretch | start | end | baseline | first baseline | last baseline + ... safe | unsafe;</p>
+            <ol>
+                <li>
+                    <p><span>normal (padrão);</span> Os items são colocados em sua posição padrão como se nenhum valor fosse definido.</p>
+                </li>
+                <li>
+                    <p><span>flex-start / start;</span> Os items são colocados até o início do recipiente. O (mais suportado) <span>flex-start</span> segui o <span>flex-direction</span> enquanto <span>start</span> segui a direção <span>writing-mode</span>.</p>
+                </li>
+                <li>
+                    <p><span>flex-end / end;</span> Os items são colocados até o final do recipiente. O (mais suportado) <span>flex-end</span> segui o <span>flex-direction</span> enquanto o final (end) segui a direção <span>writing-mode</span>.</p>
+                </li>
+                <li>
+                    <p><span>center;</span> Os items centralizados no recipiente</p>
+                </li>
+                <li>
+                    <p><span>space-between;</span> Os items são distribuídos uniformemente; a primeira linha é no início do recipiente, enquanto o último está no final.</p>
+                </li>
+                <li>
+                    <p><span>space-around;</span> Os items são distribuídos uniformemente com espaço igual em cada linha.</p>
+                </li>
+                <li>
+                    <p><span>space-evenly;</span> Os items são distribuídos uniformemente com espaço igual ao seu redor.</p>
+                </li>
+                <li>
+                    <p><span>stretch;</span>Os items são alongados para ocupar o espaço restante.</p>
+                </li>
+            </ol>
+            <div class="img-center">
+                <img class="img" src="img/align-content.svg" alt="exemplo em imagem">
+            </div>
+
+            <div class="nota">
+                <p>Nota: Esta propriedade só tem efeito em recipientes flexíveis de várias linhas, onde (flex-flow) está definido para (wrap) ou (wrap-reverse)). Um recipiente flexível de linha única (ou seja, onde (flex-flow) está definido para o seu valor padrão (no-wrap)), não refletirá no (align-content).</p>
+            </div>
+        </li>
+
+        <li>
+            <p><span>order:</span> Por padrão, os <span>flex items</span> estão colocados na ordem de origem. No entanto, a propriedade <span>order</span> controla a ordem em que eles aparecem no recipiente (flex container).</p>
+            <div class="nota">
+                <p>order: 5; -- O padrão é 0 --</p>
+            </div>
+            <div class="img-center">
+                <img class="img" src="img/order.svg" alt="imagem de exemplo">
+            </div>
+        </li>
+        <li>
+            <p><span>flex-grow:</span> Isso define a capacidade de um <span>flex item</span> crescer, se necessário. Aceita um valor sem unidade que serve como proporção. Ele dita a quantidade do espaço disponível dentro do recipiente (container) que o <span>flex item</span> deve ocupar.</p>
+            
+            <p>Se todos os items tiverem sido definidos como 1, o espaço restante no container será distribuído igualmente para todas as crianças. Se uma das crianças tem um valor de 2, o espaço restante ocuparia o dobro de espaço que os outros (ou tentará, pelo menos).</p>
+            <div class="nota">
+                <p>flex-grow: 4; /* o padrão é 0 *</p>
+            </div>
+            <div class="img-center">
+                <img class="img" src="img/flex-grow.svg" alt="imagem de exemplo">
+            </div>
+
+            <div class="nota">
+                <p>Nota: Os números negativos são inválidos.</p>
+            </div>
+        </li>
+        <li>
+            <p><span>flex-shrink:</span> Isso define a capacidade de um <span>flex item</span> se encolher, se necessário.</p>
+            <div class="nota">
+                <p>flex-shrink: 3; /* Por padrão é 1 */</p>
+            </div>
+            <div class="nota">
+                <p>Nota: Os números negativos são inválidos.</p>
+            </div>
+        </li>
+        <li>
+            <p><span>flex-basis:</span> Isso define o tamanho padrão de um elemento antes que o espaço restante seja distribuído. Pode ser um comprimento (por exemplo, 20%, 5rem, etc.) ou uma palavra-chave. A palavra-chave <span>auto</span> significa "olhe para a minha propriedade de largura ou altura" (que foi temporariamente feita pela palavra-chave <span>main-size</span> até ser rejeitada). A palavra-chave <span>content</span> significa "dimensioná-lo com base no conteúdo do item" – esta palavra-chave ainda não é bem suportada, por isso é difícil testar e mais difícil saber o que seus irmãos <span>max-content</span>, <span>min-content</span> e <span>fit-content</span> fazem.</p>
+            <p>Se definido para <span>0</span>, o espaço extra em torno do conteúdo não é contabilizado. Se definido para <span>auto</span>, o espaço extra é distribuído com base em seu valor <span>flex-grow</span>.</p>
+        </li>
+        <li>
+            <p><span>flex:</span> Esta é a taquigrafia para <span>flex-grow</span>, <span>flex-shrink</span> e <span>flex-basis</span> combinados. O segundo e o terceiro parâmetros ( <span>flex-shrink</span> e <span>flex-basis</span> ) são opcionais. O padrão é 0 1.</p>
+            <div class="nota">
+                <p>flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]</p>
+            </div>
+            <div class="nota">
+                <p>Recomenda-se que você use esta propriedade taquigrafia em vez de definir as propriedades individuais. A taquigrafia define os outros valores de forma inteligente.</p>
+            </div>
+        </li>
+        <li>
+            <p><span>align-self:</span> Isso permite que o alinhamento padrão (ou o especificado por <span>align-items</span> ) seja substituído por <span>flex items</span> individuais.</p>
+            <div class="nota">
+                <p> align-self: auto | flex-start | flex-end | center | baseline | stretch;</p>
+            </div>
+            <div class="nota">
+                <p>Nota que (float), (clear) e (vertical-align) não tem efeito sobre um flex item.</p>
+            </div>
+            <div class="img-center">
+                <img class="img" src="img/align-self.svg" alt="imagem de exemplo">
+            </div>
+        </li>
+      </ol>
+
+      <footer>
+        <p>2021 &copy; Site desenvolvido para resumo de informações.</p>
+     </footer>
+</body>
+</html>
