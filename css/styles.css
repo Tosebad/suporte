@@ -1,0 +1,159 @@
+/* Configurações universais */
+body {
+  font-size: 16px;
+  font-family: 'Avenir LT Std', sans-serif;
+  box-sizing: border-box;
+  width: 90%;
+  max-width: 1020px;
+  margin: 0 auto;
+  background-color: #E0FBFC;
+}
+
+/* Formatação de texto */
+
+nav li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1em;
+  color: #E0FBFC;
+}
+
+nav li a:hover {
+  color: #666;
+  transition: all .3s;
+}
+
+h1 {
+  margin-top: 80px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.lista li p span {
+  font-weight: bold;
+  font-size: 1.3em;
+  color: #791E94;
+}
+
+p {
+  font-size: 1em;
+}
+
+/* estilo de links externos */
+
+.e-links {
+  color: rgb(2, 255, 200);
+}
+
+/* estilo de links internos */
+.i-links {
+  color: rgb(187, 37, 11);
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+/* menu do site */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #253237;
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.menu {
+  display: flex;
+  padding: 0;
+}
+
+.menu li {
+  padding: 10px;
+  list-style: none;
+  margin-left: 5px;
+}
+
+/* lista de explicações das funções */
+
+.lista {
+  display: flex;
+  flex-direction: column;
+}
+
+.lista li {
+  background-color: #9DB4C0;
+  margin-bottom: 10px;
+  padding: 0 10px;
+  border-radius: 4px;
+}
+
+
+/* Personalização do exemplo */
+
+.l-exemplo li {
+  list-style: none;
+  background-color: #0C0A3E;
+  padding: 5px;
+  border-radius: 3px;
+  margin-bottom: 5px;
+}
+
+.exemplo {
+  color: #F9564F;
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: 900;
+}
+
+.explicacao {
+  font-size: 1em;
+  color: beige;
+  padding: 0 5px;
+}
+
+.l-exemplo li span {
+  color: #F9564F;
+  font-weight: 900;
+}
+
+/* Footer */
+
+
+footer p {
+  text-align: center;
+  margin-top: 20px;
+  color: #666;
+}
+
+/* img exemplo */
+
+.img-center {
+  display: flex;
+  justify-content: center;
+}
+
+.img {
+  width: 90%;
+  max-width: 400px;
+  max-height: 400px;
+}
+
+/* notas sobre o elemento */
+
+.nota {
+  width: 90%;
+  padding: 8px;
+  margin: 30px auto 30px auto;
+  border-radius: 3px;
+  color: #000;
+  background-color: #adc9d8;
+  text-align: center;
+}
+
+

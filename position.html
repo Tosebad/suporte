@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://fonts.cdnfonts.com/css/avenir-lt-std" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Suporte CSS - Position</title>
+</head>
+<body>
+    <nav>
+        <ul class="menu">
+          <li>
+            <a href="#">Position</a>
+          </li>
+          <li>
+            <a href="display.html">Display</a>
+          </li>
+           <li>
+            <a href="index.html">Overflow</a>
+          </li>
+          <li>
+            <a href="flexbox.html">Flexbox</a>
+          </li>
+        </ul>
+      </nav>
+      
+      <h1>Position</h1>
+
+        <ul class="l-exemplo">
+            <li>
+                <p class="exemplo">Exemplo: - position: static, relative, absolute, fixed, sticky, inherit;</p>
+            </li>
+            <li>
+                <p class="explicacao">Resumo: - A propriedade pode ajudá-lo a manipular a localização de um elemento.</p>
+            </li>
+        </ul>
+
+      <ol class="lista">
+          <li>
+              <p><span>static:</span> - cada elemento tem uma posição estática por padrão, de modo que o elemento se ater ao fluxo normal da página. Então, se houver um conjunto de left / right / top / bottom / z-index então não haverá efeito sobre esse elemento.</p>
+          </li>
+          <li>
+              <p> <span>relative:</span> - a posição original de um elemento permanece no fluxo do documento, assim como o valor. Mas agora os valores left / right / top / bottom / z-index vai funcionar. As propriedades posicionais "cutucam" o elemento da posição original nessa direção.</p>
+          </li>
+          <li>
+              <p><span>absolute:</span> - O elemento é removido do fluxo do documento e outros elementos se comportarão como se ele não estivesse lá enquanto todas as outras propriedades posicionais trabalharão nele. </p>
+          </li>
+          <li>
+              <p><span>fixed:</span> - O elemento é removido do fluxo do documento como elementos absolutamente posicionados. Na verdade, eles se comportam quase da mesma forma, apenas elementos posicionados fixos são sempre relativos ao documento, não a nenhum pai em particular, e não são afetados pela rolagem. </p>
+          </li>
+          <li>
+              <p><span>sticky (experimental): </span> - O elemento é tratado como um valor <span>relative</span> até que a localização do pergaminho da viewport atinja um limite especificado, momento em que o elemento assume uma posição <span>fixed</span> onde é dito para grudar naquela posição.
+      </p>
+          </li>
+          <li>
+              <p><span>inherit:</span> - O valor <span>position</span> não é uma cascata, então isso pode ser usado para forçá-lo especificamente, e o valor <span>inherit</span> de posicionamento de seu pai.</p>
+          </li>
+      </ol>
+
+      <footer>
+          <p>2021 &copy; Site desenvolvido para resumo de informações.</p>
+      </footer>
+</body>
+</html>
