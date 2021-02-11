@@ -154,6 +154,7 @@ footer p {
   color: #000;
   background-color: #adc9d8;
   text-align: center;
+  box-shadow: 1px 1px 10px #000;
 }
 
 
