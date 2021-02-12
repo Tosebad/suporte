@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: #ccc;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    background-color: #373F47;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+}
+
+.header .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    clear: both;
+    overflow: hidden;
+    max-height: 0;
+    transition: all .8s;
+}
+
+.header .menu a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.header .menu a:hover, .header .btn-icon:hover {
+    background-color: #6C91C2;
+    transition: all .5s ease-out;
+}
+
+.header .logo {
+    float: left;
+    padding: 20px;
+    font-size: 2em;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.header .menu-icon {
+    cursor: pointer;
+    margin: 12px 10px 0 0;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+}
+
+.header .menu-icon .nav-icon {
+    background-color: #C3C9E9;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 18px;
+}
+
+.header .menu-icon .nav-icon:before,
+.header .menu-icon .nav-icon:after {
+    background-color: #C3C9E9;
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+.header .menu-icon .nav-icon:before {
+    top: 5px;
+}
+
+.header .menu-icon .nav-icon:after {
+    top: -5px;
+}
+
+.header .btn-menu {
+    display: none;
+}
+
+.header .btn-menu:checked ~ .menu {
+    max-height: 340px;
+}
+
+
+
+@media screen and (min-width: 870px){
+    .header {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header .menu {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .header .menu li {
+        width: 100px;
+        margin-left: 5px;
+    }
+
+    .header .menu {
+        max-height: 80px;
+    }
+
+    .header .menu a {
+        border: none;
+        padding: 10px 0;
+        font-weight: bold;
+    }
+
+    .header .menu a:hover {
+        background-color: transparent;
+        transition: all .5s ease-out;
+        color: rgb(7, 190, 181);
+    }
+
+    .menu-icon {
+        display: none;
+    }
+}
